@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Administrador | Educa Diadema</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .sidebar { background-color: #003366; }
+    </style>
+</head>
+<body class="flex min-h-screen">
+
+    <!-- Menu Lateral -->
+    <div class="sidebar w-64 text-white p-6 hidden md:block">
+        <h1 class="font-black text-xl mb-10 tracking-tighter">EDUCA DIADEMA</h1>
+        <nav class="space-y-4">
+            <a href="#" class="block p-3 bg-blue-800 rounded-lg font-bold">🏠 Dashboard</a>
+            <a href="#" class="block p-3 hover:bg-blue-700 rounded-lg transition">🎥 Vídeos/Reels</a>
+            <a href="#" class="block p-3 hover:bg-blue-700 rounded-lg transition">📰 Notícias</a>
+            <a href="#" class="block p-3 hover:bg-blue-700 rounded-lg transition">🤝 Patrocinadores</a>
+            <a href="#" class="block p-3 hover:bg-blue-700 rounded-lg transition text-yellow-400">⚙️ Configurações</a>
+        </nav>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="flex-grow p-8">
+        <header class="flex justify-between items-center mb-10">
+            <div>
+                <h2 class="text-2xl font-black text-slate-800 uppercase">Olá, Osmir Belo!</h2>
+                <p class="text-slate-500">O que vamos publicar hoje para Diadema?</p>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-xs font-bold text-green-600 bg-green-100 px-3 py-1 rounded-full uppercase italic">Site Online</span>
+                <div class="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center font-bold text-blue-900">OB</div>
+            </div>
+        </header>
+
+        <!-- Formulário de Nova Notícia -->
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 max-w-4xl">
+            <h3 class="text-lg font-black text-slate-800 mb-6 flex items-center">
+                <span class="mr-2">📝</span> POSTAR NOVA NOTÍCIA NO PORTAL
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-black uppercase text-slate-500 mb-2">Título da Notícia</label>
+                        <input type="text" placeholder="Ex: Entrevista com Joice Barros" class="w-full p-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black uppercase text-slate-500 mb-2">Categoria</label>
+                        <select class="w-full p-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                            <option>Entrevista</option>
+                            <option>Gestão Municipal</option>
+                            <option>Eventos</option>
+                            <option>Aviso da Rede</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-black uppercase text-slate-500 mb-2">Link do Vídeo (YouTube/Instagram)</label>
+                        <input type="text" placeholder="https://..." class="w-full p-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-black uppercase text-slate-500 mb-2">Resumo Curto</label>
+                        <textarea placeholder="Fale brevemente sobre o assunto..." class="w-full p-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none h-24"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t flex justify-end">
+                <button onclick="alert('Isso enviaria os dados para o seu arquivo index.html!')" class="bg-blue-900 text-white px-8 py-3 rounded-lg font-black uppercase text-sm hover:bg-blue-800 transition shadow-lg">
+                    Publicar Agora 🚀
+                </button>
+            </div>
+        </div>
+
+        <!-- Estatísticas Rápidas -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                <p class="text-xs font-bold text-slate-400 uppercase">Acessos Hoje</p>
+                <p class="text-3xl font-black text-blue-900">1.240</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                <p class="text-xs font-bold text-slate-400 uppercase">Vídeos Postados</p>
+                <p class="text-3xl font-black text-blue-900">45</p>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                <p class="text-xs font-bold text-slate-400 uppercase">Patrocínios Ativos</p>
+                <p class="text-3xl font-black text-yellow-500">03</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
